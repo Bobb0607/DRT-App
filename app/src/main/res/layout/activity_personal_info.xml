@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_shade_1"
+    tools:context=".PersonalInfo">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="151dp"
+        android:layout_height="159dp"
+        android:elevation="1dp"
+        android:src="@drawable/profile_image_default"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:text="Profile name"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelBtn3"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/custom_button_back"
+        android:clickable="true"
+        android:text="back"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:backgroundTint="@color/quantum_googred"
+        app:layout_constraintEnd_toEndOf="@+id/edit_profile_btn"
+        app:layout_constraintStart_toStartOf="@+id/edit_profile_btn"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_btn" />
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:text="Email"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_name"
+        app:layout_constraintStart_toStartOf="@+id/profile_name"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+    <TextView
+        android:id="@+id/profile_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_home"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:text="Address"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_email"
+        app:layout_constraintStart_toStartOf="@+id/profile_email"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+
+    <TextView
+        android:id="@+id/profile_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_baseline_contacts_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:text="Contact number"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_address"
+        app:layout_constraintStart_toStartOf="@+id/profile_address"
+        app:layout_constraintTop_toBottomOf="@+id/profile_address" />
+
+    <ImageButton
+        android:id="@+id/add_profilePicButton"
+        android:layout_width="32dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_btn"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="#2596be"
+        android:text="edit"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/profile_contact"
+        app:layout_constraintStart_toStartOf="@+id/profile_contact"
+        app:layout_constraintTop_toBottomOf="@+id/profile_contact" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/frame"
+        android:elevation="0dp"
+        android:translationZ="0.0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

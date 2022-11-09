@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_shade_1"
+    tools:context=".edit_profile">
+
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="EDIT PROFILE"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/profile_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:hint="Your Name"
+        android:paddingVertical="10dp"
+
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView46"
+        app:layout_constraintStart_toStartOf="@+id/textView46"
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+    <TextView
+        android:id="@+id/profile_address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_home"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:hint="Add your address here."
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_name_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_name_edit"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_edit" />
+
+    <TextView
+        android:id="@+id/profile_contact_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_baseline_contacts_24"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:hint="Add your mobile number here."
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_address_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_address_edit"
+        app:layout_constraintTop_toBottomOf="@+id/profile_address_edit" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/custom_button_back"
+        android:text="back"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="100dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/resetPasswordLocal"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="@+id/resetPasswordLocal"
+        app:layout_constraintTop_toBottomOf="@+id/resetPasswordLocal" />
+
+    <TextView
+        android:id="@+id/resetEmailLocal"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_corner"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:hint="Email Address"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/resetPasswordLocal"
+        app:layout_constraintTop_toBottomOf="@+id/profile_contact_edit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetPasswordLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:hint="Change password"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_contact_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_contact_edit"
+        app:layout_constraintTop_toBottomOf="@+id/profile_contact_edit" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="772dp"
+        android:background="@drawable/frame"
+        android:elevation="0dp"
+        android:translationZ="0.0dp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

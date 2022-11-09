@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/idRLBottomsheet"
+    android:background="@color/blue_shade_1">
+
+    <TextView
+        android:id="@+id/idTVtripname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/baloo"
+        android:padding="4dp"
+        android:text="Trip Name"
+        android:textColor="@color/white"
+        android:textSize="20dp"></TextView>
+
+    <ImageView
+        android:id="@+id/idIVtrip"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/idTVtripname"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/ic_launcher_background"
+        android:padding="4dp"
+        android:src="@drawable/ic_launcher_foreground">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/idTVdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idTVtripname"
+        android:layout_toRightOf="@+id/idIVtrip"
+        android:fontFamily="@font/baloo"
+        android:text="Desctription"
+        android:textColor="@color/white"></TextView>
+
+    <TextView
+        android:id="@+id/idTVdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idTVdescription"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="3dp"
+        android:layout_toRightOf="@+id/idIVtrip"
+        android:fontFamily="@font/baloo"
+        android:text="Date"
+        android:textColor="@color/white"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/idTVdate"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="Edit Trip"
+
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button_back"
+            android:id="@+id/idBtnEdit"
+            ></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="View details"
+            android:textColor="@color/white"
+            android:id="@+id/idBtnViewDetails"
+            android:background="@drawable/custom_button_back"
+            ></androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</RelativeLayout>

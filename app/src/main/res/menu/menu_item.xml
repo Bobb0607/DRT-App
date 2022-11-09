@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item app:showAsAction="always"
+        android:icon="@drawable/navbarbtn"
+          android:title="">
+
+        <menu>
+
+
+            <item
+                android:icon="@drawable/ic_home"
+                android:id="@+id/Homepage"
+                android:title="Homepage"
+                app:showAsAction="never"/>
+
+            <item
+                android:icon="@drawable/ic_profile"
+                android:id="@+id/Profile"
+                android:title="Profile"
+                app:showAsAction="never"/>
+            <item
+                android:icon="@drawable/ic_help"
+                android:id="@+id/Help"
+                android:title="Help"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/devs"
+                android:icon="@drawable/ic_baseline_code_24"
+                android:title="About Us"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ContactInfo"
+                android:icon="@drawable/ic_baseline_contacts_24"
+                android:title="Contact info"
+                app:showAsAction="never" />
+
+            <item
+                android:icon="@drawable/ic_logout"
+                android:id="@+id/Logout"
+                android:title="Log out"
+                app:showAsAction="never"/>
+
+
+
+        </menu>
+
+    </item>
+</menu>

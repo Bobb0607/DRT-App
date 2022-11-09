@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="10dp"
+
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/mountainbg"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/tripspottext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/img1"
+            android:fontFamily="@font/baloo"
+            android:layout_marginStart="6dp"
+            android:text="Spot Name"
+            android:textColor="@color/black"
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:id="@+id/tripstarttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img1"
+
+
+            android:layout_toStartOf="@+id/nothing"
+            android:fontFamily="@font/baloo"
+            android:gravity="end"
+            android:text="Trip Start"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img1"
+            android:layout_marginHorizontal="6dp"
+            android:layout_toStartOf="@+id/tripendtext"
+            android:fontFamily="@font/baloo"
+            android:gravity="end"
+            android:text="-"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/tripnametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tripspottext"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/img1"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/baloo"
+            android:text="Trip Name"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tripendtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img1"
+            android:layout_alignEnd="@+id/tripnametext"
+            android:fontFamily="@font/baloo"
+            android:gravity="end"
+            android:text="Trip End"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/tripdesctext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tripstarttext"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="Trip Description"
+            android:textSize="15dp"></TextView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/tripdesctext"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEdit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/custom_button_back"
+                android:fontFamily="@font/baloo"
+                android:text="edit"
+                android:textColor="@color/white"
+                android:textSize="20dp"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDelete"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/custom_button_back"
+                android:backgroundTint="@color/quantum_googred"
+                android:fontFamily="@font/baloo"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:textSize="20dp"></androidx.appcompat.widget.AppCompatButton>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

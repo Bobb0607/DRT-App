@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="#0099d1"
+    android:layout_marginTop="25dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_gravity=""
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/baloo"
+        android:background="@drawable/touristimg"
+        android:textColor="#FFEB3B"
+        android:textSize="40sp" />
+
+</LinearLayout>

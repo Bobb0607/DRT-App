@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Update Details"
+        android:background="@color/blue_shade_2"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        >
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="Tourist Spot"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:id="@+id/txtTripspot"
+        android:background="@drawable/rounded">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="Name of Your Trip"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:id="@+id/txtTripname"
+        android:background="@drawable/rounded">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="Start Date"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:id="@+id/txtTripstart"
+        android:background="@drawable/rounded">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="End Date"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:id="@+id/txtTripend"
+        android:background="@drawable/rounded">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="Description"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:id="@+id/txtTripdesc"
+        android:background="@drawable/rounded">
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:background="@drawable/custom_button_back"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:id="@+id/btnUpdate"
+        android:backgroundTint="@color/blue_shade_2"
+        android:text="update">
+
+    </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

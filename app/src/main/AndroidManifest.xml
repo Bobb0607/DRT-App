@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.drttouristplanner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DRTTouristPlanner">
+        <activity
+            android:name=".recyclerviewfinal"
+            android:exported="false" />
+        <activity
+            android:name=".view_trip"
+            android:exported="false" />
+        <activity
+            android:name=".EditTrip"
+            android:exported="false" />
+        <activity
+            android:name=".IteneraryAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_itenerary_adapter"
+            android:theme="@style/Theme.DRTTouristPlanner.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BarangayAll"
+            android:exported="false"
+            android:label="@string/title_activity_barangay_all"
+            android:theme="@style/Theme.DRTTouristPlanner.NoActionBar" />
+        <activity
+            android:name=".CreateTrip"
+            android:exported="false" />
+        <activity
+            android:name=".itenirary_layout"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".AutocompletePlace"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/googleApi" />
+
+        <activity android:name=".MapActivity3" />
+        <activity
+            android:name=".MapsActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_maps2" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".edit_contact_layout"
+            android:exported="false" />
+        <activity
+            android:name=".placesAPI"
+            android:exported="false" />
+        <activity
+            android:name=".edit_name_layout"
+            android:exported="false" />
+        <activity
+            android:name=".Content_All"
+            android:exported="false" />
+        <activity
+            android:name=".edit_profile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DRTTouristPlanner.NoActionBar" />
+        <activity
+            android:name=".Content_Bayabas"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Content_Camachile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Content_Camachin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Content_Kalawakan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Content_Talbak"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Barangay"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BarangayTalbak"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BarangayKalawakan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BarangayCamachin"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BarangayCamachile"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Developers"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactInfo"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Help"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetTripName"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PersonalInfo"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BarangayBayabas"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

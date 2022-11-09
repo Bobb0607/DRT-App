@@ -1,0 +1,184 @@
+<resources>
+    <string name="app_name"> </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navi">Close</string>
+    <string name="googleApi">AIzaSyCTFEhjwd3MS971CvMG85qIFLWXEYi-Q8s</string>
+
+    <string-array name="numbers">
+
+        <item>Homepage</item>
+        <item>Profile</item>
+        <item>Help</item>
+        <item>Log Out</item>
+
+    </string-array>
+
+    <string-array name="spinner1">
+        <item>Select Category</item>
+        <item>Mountains</item>
+        <item>Falls</item>
+        <item>Rivers</item>
+        <item>Hills</item>
+        <item>Caves</item>item>
+    </string-array>
+
+    <string-array name="Caves">
+        <item>Caves</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Mountains</item>
+        <item>Falls</item>
+        <item>Rivers</item>
+        <item>Hills</item>
+
+    </string-array>
+
+    <string-array name="Mountains">
+        <item>Mountains</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Caves</item>
+        <item>Rivers</item>
+        <item>Hills</item>
+
+    </string-array>
+
+    <string-array name="Hills">
+        <item>Hills</item>
+        <item>All</item>
+        <item>Mountains</item>
+        <item>Falls</item>
+        <item>Caves</item>
+        <item>Rivers</item>
+
+    </string-array>
+
+
+    <string-array name="Falls">
+        <item>Falls</item>
+        <item>All</item>
+        <item>Mountains</item>
+        <item>Falls</item>
+        <item>Caves</item>
+        <item>Rivers</item>
+        <item>Hills</item>
+
+    </string-array>
+
+    <string-array name="Rivers">
+        <item>Rivers</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Mountains</item>
+        <item>Falls</item>
+        <item>Caves</item>
+        <item>Hills</item>
+
+    </string-array>
+
+    <string-array name="spinner2">
+        <item>Select Category</item>
+        <item>Falls</item>
+        <item>Infrastructures</item>
+        <item>Mountains</item>
+        <item>Springs</item>
+    </string-array>
+
+    <string-array name="Falls2">
+        <item>Falls</item>
+        <item>All</item>
+        <item>Infrastructures</item>
+        <item>Mountains</item>
+        <item>Springs</item>
+    </string-array>
+
+    <string-array name="Infastructure">
+        <item>Infrastructures</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Mountains</item>
+        <item>Springs</item>
+    </string-array>
+
+    <string-array name="Mountain2">
+        <item>Mountains</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Infrastructures</item>
+        <item>Springs</item>
+    </string-array>
+
+    <string-array name="Spring">
+        <item>Springs</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Infrastructures</item>
+        <item>Mountains</item>
+    </string-array>
+
+    <string-array name="spinner3">
+        <item>Select Category</item>
+        <item>Falls</item>
+        <item>Infrastructures</item>
+    </string-array>
+
+    <string-array name="Falls3">
+        <item>Falls</item>
+        <item>All</item>
+        <item>Infrastructures</item>
+    </string-array>
+
+    <string-array name="Infrastructure2">
+        <item>Infrastructures</item>
+        <item>All</item>
+        <item>Falls</item>
+    </string-array>
+
+    <string-array name="spinner4">
+        <item>Select Category</item>
+        <item>Falls</item>
+        <item>Mountains</item>
+        <item>Lake</item>
+    </string-array>
+
+    <string-array name="Falls4">
+        <item>Falls</item>
+        <item>All</item>
+        <item>Mountains</item>
+        <item>Lake</item>
+    </string-array>
+
+    <string-array name="Mountain4">
+        <item>Mountains</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Lake</item>
+    </string-array>
+
+    <string-array name="Lakes">
+        <item>Lake</item>
+        <item>All</item>
+        <item>Falls</item>
+        <item>Mountain</item>
+    </string-array>
+
+
+    <string name="title_activity_batong_palaka">BatongPalaka</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+    <string name="title_activity_barangay_all">BarangayAll</string>
+    <string name="title_activity_itenerary_adapter">IteneraryAdapter</string>
+
+</resources>

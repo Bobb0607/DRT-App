@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "327713323462",
+    "project_id": "drt-tourist-planner-5bb3d",
+    "storage_bucket": "drt-tourist-planner-5bb3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327713323462:android:c7324eefda3247999c5ac7",
+        "android_client_info": {
+          "package_name": "com.example.drttouristplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327713323462-c91bfnfkjprk8ttin4p5sebh9n326cfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDePLXlZBvTaKqGbNgNXWIBwAFZnJSsbAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327713323462-c91bfnfkjprk8ttin4p5sebh9n326cfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

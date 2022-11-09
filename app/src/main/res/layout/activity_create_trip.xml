@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateTrip"
+    android:background="@color/blue_shade_1"
+    tools:layout_editor_absoluteY="25dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/TripName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:hint="Trip Name"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseImgBtn" />
+
+    <EditText
+        android:id="@+id/EDdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="Description"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDendDate" />
+
+    <TextView
+        android:id="@+id/tripTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="TITLE"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_trip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:background="@drawable/custom_button_back"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="165dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDdesc" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_tripCreation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="165dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/quantum_googred"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baloo"
+        android:textSize="20dp"
+        android:onClick="cancel"
+        android:text="Cancel"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_trip_button" />
+
+    <ImageView
+        android:id="@+id/tripIMG"
+        android:layout_width="259dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripTitle"
+        tools:srcCompat="@drawable/adarnafalls" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chooseImgBtn"
+            android:textSize="20dp"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button_back"
+            android:text="Edit Image"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tripIMG"
+            app:layout_constraintStart_toStartOf="@+id/tripIMG"
+            app:layout_constraintTop_toBottomOf="@+id/tripIMG">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="161dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Start Date"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TripName" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="166dp"
+        android:fontFamily="@font/baloo"
+        android:text="End Date"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDstartDate" />
+
+        <Button
+            android:id="@+id/EDstartDate"
+            style="?android:spinnerStyle"
+            android:layout_width="206dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginEnd="103dp"
+            android:onClick="StartDate"
+            android:text="Start Date"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+        <Button
+        android:id="@+id/EDendDate"
+        style="?android:spinnerStyle"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="103dp"
+        android:onClick="EndDate"
+        android:text="End Date"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+        <ProgressBar
+            android:id="@+id/idPBloading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/cancel_tripCreation_button"
+            app:layout_constraintStart_toStartOf="@+id/cancel_tripCreation_button"
+            app:layout_constraintTop_toBottomOf="@+id/cancel_tripCreation_button"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
