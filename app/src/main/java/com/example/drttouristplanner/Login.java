@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
@@ -68,6 +69,8 @@ public class Login extends AppCompatActivity {
         myLoginBtn = findViewById(R.id.loginBtn);
         myCreateBtn = findViewById(R.id.createTxt);
         forgetText = findViewById(R.id.forgetPassword);
+
+        myCreateBtn.setPaintFlags(myCreateBtn.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         myLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,13 +147,13 @@ public class Login extends AppCompatActivity {
                             int selection = myPassword.getSelectionEnd();
                             if (passwordVisible) {
                                 //SET DRAWABLE IMAGE HERE
-                                myPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
+                                myPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.visibilityoffwhite, 0);
                                 //HIDE PASSWORD
                                 myPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                                 passwordVisible = false;
                             } else {
                                 //SET DRAWABLE IMAGE HERE
-                                myPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
+                                myPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.visibilitywhite, 0);
                                 //SHOW PASSWORD
                                 myPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                                 passwordVisible = true;

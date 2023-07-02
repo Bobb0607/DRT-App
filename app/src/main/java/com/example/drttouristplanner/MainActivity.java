@@ -6,7 +6,6 @@
 package com.example.drttouristplanner;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +15,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,17 +23,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //VARIABLES
 
     TextView fullName, email, phone, verifyMsg, verified, textView8;
+    ImageSlider imageSlider1, imageSlider2,imageSlider3, imageSlider4;
+    ;
     FirebaseAuth fAuth;
     Button resendCode;
     Button startTour, startATourDrtBtn;
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     FirebaseUser user;
+    FloatingActionButton floatingActionButton;
 
 
 
@@ -53,6 +60,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         fAuth = FirebaseAuth.getInstance();
+        imageSlider1 = findViewById(R.id.imageSlider1);
+        imageSlider2 = findViewById(R.id.imageSlider2);
+        imageSlider3 = findViewById(R.id.imageSlider3);
+        imageSlider4 = findViewById(R.id.imageSlider4);
+
+
 
         //HOOKS
         resendCode = findViewById(R.id.sendVerificationCode);
@@ -60,6 +73,95 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startATourDrtBtn = findViewById(R.id.startTourDrt);
         verifyMsg = findViewById(R.id.verifyMsg);
         verified = findViewById(R.id.verified);
+
+
+        ArrayList<SlideModel> images = new ArrayList<>();
+        images.add(new SlideModel(R.drawable.batongpalaka, ScaleTypes.FIT));
+        images.add(new SlideModel(R.drawable.batongpalaka2, ScaleTypes.FIT));
+        images.add(new SlideModel(R.drawable.puningcave1, ScaleTypes.FIT));
+        images.add(new SlideModel(R.drawable.secretfalls, ScaleTypes.FIT));
+
+        imageSlider1.setImageList(images);
+
+
+        ArrayList<SlideModel> images2 = new ArrayList<>();
+        images2.add(new SlideModel(R.drawable.adarnafalls, ScaleTypes.FIT));
+        images2.add(new SlideModel(R.drawable.balistada2, ScaleTypes.FIT));
+        images2.add(new SlideModel(R.drawable.tangke, ScaleTypes.FIT));
+
+        imageSlider2.setImageList(images2);
+
+        ArrayList<SlideModel> images3 = new ArrayList<>();
+        images3.add(new SlideModel(R.drawable.malangaanspring, ScaleTypes.FIT));
+        images3.add(new SlideModel(R.drawable.tangke, ScaleTypes.FIT));
+        images3.add(new SlideModel(R.drawable.secretfalls2, ScaleTypes.FIT));
+        images3.add(new SlideModel(R.drawable.tangke, ScaleTypes.FIT));
+
+        imageSlider3.setImageList(images3);
+
+        ArrayList<SlideModel> images4 = new ArrayList<>();
+        images4.add(new SlideModel(R.drawable.mtmanalmon, ScaleTypes.FIT));
+        images4.add(new SlideModel(R.drawable.mtmavio, ScaleTypes.FIT));
+        images4.add(new SlideModel(R.drawable.tilapilonhills, ScaleTypes.FIT));
+
+        imageSlider4.setImageList(images4);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Tap on the Items above or in the navigation bar go to Categories or Barangay to start browsing tourist spots")
+                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                // Create the AlertDialog object and return it
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+
+
+
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.navbottomhome);
+
+        // Perform item selected listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.navbottomhome:
+                        return true;
+
+                    case R.id.navbottomtrips:
+                        startActivity(new Intent(getApplicationContext(),recyclerviewfinal.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcategories:
+                        startActivity(new Intent(getApplicationContext(),Categories.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcreateTrip:
+                        startActivity(new Intent(getApplicationContext(),Barangay.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomprofile:
+                        startActivity(new Intent(getApplicationContext(),PersonalInfo.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
+
 
         drawer_layout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -158,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         FirebaseUser user = fAuth.getCurrentUser();
 
         if (fAuth.getCurrentUser().isEmailVerified()) {
-            Intent intent = new Intent(MainActivity.this, Barangay.class);
+            Intent intent = new Intent(MainActivity.this, All_Barangay.class);
             startActivity(intent);
         } else {
             Toast.makeText(MainActivity.this, "Your E-mail is unverified!", Toast.LENGTH_SHORT).show();
@@ -178,6 +280,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+    public void Featured(View v) {
+        Intent intent = new Intent(MainActivity.this, Tourist_Spots.class);
+        intent.putExtra("target_data", "featured");
+        startActivity(intent);
+
+    }
+    //
+    public void Family(View v) {
+        Intent intent = new Intent(MainActivity.this, Tourist_Spots.class);
+        intent.putExtra("target_data", "family");
+        startActivity(intent);
+
+    }
+    //
+    public void Swimming(View v) {
+        Intent intent = new Intent(MainActivity.this, Tourist_Spots.class);
+        intent.putExtra("target_data", "swimming");
+        startActivity(intent);
+
+    }
+    //
+    public void Hiking(View v) {
+        Intent intent = new Intent(MainActivity.this, Tourist_Spots.class);
+        intent.putExtra("target_data", "hiking");
+        startActivity(intent);
+
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -187,11 +317,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_trips:
                 Intent trip = new Intent(MainActivity.this,recyclerviewfinal.class);
                 startActivity(trip);
-                break;
-
-            case R.id.nav_help:
-                Intent help = new Intent(MainActivity.this,Help.class);
-                startActivity(help);
                 break;
             case R.id.nav_profile:
                 Intent profile = new Intent(MainActivity.this,PersonalInfo.class);
@@ -222,8 +347,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         return true;
     }
-
-
 
 }
 

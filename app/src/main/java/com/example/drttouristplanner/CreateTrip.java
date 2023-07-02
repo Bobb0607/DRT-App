@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -16,6 +17,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.InputFilter;
+import android.text.TextUtils;
 import android.util.SparseIntArray;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +35,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -45,6 +48,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
@@ -62,6 +67,7 @@ public class CreateTrip extends AppCompatActivity {
     private Button endDate;
     private Button chooseImg;
     private String tripID;
+    private String placeID;
     private TripRVModal tripRVModal;
     private Uri mImageUri;
 
@@ -78,6 +84,8 @@ public class CreateTrip extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseUser fUser;
 
+
+
     ArrayList<ContentModel> defaultContent = new ArrayList<>();
 
 
@@ -86,6 +94,8 @@ public class CreateTrip extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_trip);
         Intent intent = new Intent(CreateTrip.this, CreateTrip.class);
+
+
 
         Button save = findViewById(R.id.save_trip_button);
         Button cancel = findViewById(R.id.cancel_tripCreation_button);
@@ -99,6 +109,24 @@ public class CreateTrip extends AppCompatActivity {
         chooseImg = findViewById(R.id.chooseImgBtn);
         ActivityResultLauncher<String> mTakePhoto;
 
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton8);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(CreateTrip.this);
+                builder.setMessage("1.Tap on Trip Name and input desired name for the trip \n 2.Tap on the Notes and input desired description or note and tap save if you are done")
+                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                // Create the AlertDialog object and return it
+                androidx.appcompat.app.AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
 
 
         initDatePicker();
@@ -114,6 +142,7 @@ public class CreateTrip extends AppCompatActivity {
 
         ArrayList<Integer> Images = getIntent().getIntegerArrayListExtra("Image");
         String title = getIntent().getStringExtra("Title");
+        placeID = getIntent().getStringExtra("place_id");
 
         tripTitle.setText(title);
 
@@ -145,10 +174,10 @@ public class CreateTrip extends AppCompatActivity {
         if (title.equals("Secret Falls")) {
             imageView.setImageResource(R.drawable.secretfalls);
         }
-        if (title.equals("Mt. Balistada")) {
+        if (title.equals("Mt.Balistada")) {
             imageView.setImageResource(R.drawable.balistada);
         }
-        if (title.equals("Mt. Manalmon")) {
+        if (title.equals("Mt.Manalmon")) {
             imageView.setImageResource(R.drawable.mtmanalmon);
         }
         if (title.equals("Patingan Cave")) {
@@ -169,13 +198,13 @@ public class CreateTrip extends AppCompatActivity {
         if (title.equals("Talon ni Pari")) {
             imageView.setImageResource(R.drawable.talonpari);
         }
-        if (title.equals("Tangke")) {
+        if (title.equals("Tangke River")) {
             imageView.setImageResource(R.drawable.tangke);
         }
         if (title.equals("Tila Pilon Hills")) {
             imageView.setImageResource(R.drawable.tilapilonhills);
         }
-        if (title.equals("Mt. Mavio")) {
+        if (title.equals("Mt.Mavio")) {
             imageView.setImageResource(R.drawable.mtmavio);
         }
         if (title.equals("Palanguyan")) {
@@ -183,6 +212,9 @@ public class CreateTrip extends AppCompatActivity {
         }
         if (title.equals("Verdibia Falls")) {
             imageView.setImageResource(R.drawable.verdibia);
+        }
+        if (title.equals("Tila Pilon Hills Cafe")) {
+            imageView.setImageResource(R.drawable.cafe1);
         }
 
         //save button for creating trip
@@ -211,13 +243,13 @@ public class CreateTrip extends AppCompatActivity {
 
 
 
-                if (name.equals("") && description.equals("")) {
-                    Toast.makeText(CreateTrip.this, "Trip Name and Description Cannot be Null", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(name)){
+                    TripName.setError("Please Input a Trip Title!");
                 } else {
 
 
 
-                    insertData();
+                    insertData(placeID);
                     //clearAll();
 
                 }
@@ -325,10 +357,11 @@ public class CreateTrip extends AppCompatActivity {
 
 
 
-    private void insertData()
+    private void insertData(String place_id)
     {
         String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
         Map<String,Object> map = new HashMap<>();
+        map.put("place_id",place_id);
         map.put("trip_spot",tripTitle.getText().toString());
         map.put("trip_name",TripName.getText().toString());
         map.put("trip_start",startDate.getText().toString());
@@ -342,6 +375,7 @@ public class CreateTrip extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         Toast.makeText(CreateTrip.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(CreateTrip.this,recyclerviewfinal.class);
+                        //intent.putExtra("PlaceID",placeID);
                         Toast.makeText(CreateTrip.this, currentuser, Toast.LENGTH_SHORT).show();
 
                         startActivity(intent);
@@ -350,10 +384,13 @@ public class CreateTrip extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(CreateTrip.this, "Error while insersion.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CreateTrip.this, "Error while insertion.", Toast.LENGTH_SHORT).show();
                     }
                 });
+
+
     }
+
 /*
     private void clearAll(){
         tripTitle.setText("");

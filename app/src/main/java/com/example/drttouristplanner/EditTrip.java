@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -153,6 +154,9 @@ public class EditTrip extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
+
                 progressBar.setVisibility(View.VISIBLE);
                 String title = tripTitle.getText().toString();
                 String name = TripName.getText().toString();
@@ -160,55 +164,60 @@ public class EditTrip extends AppCompatActivity {
 
                 tripID = title;
 
+                if (TextUtils.isEmpty(name)){
+                    TripName.setError("Your name is required!");
+                    return;
+                }
 
-                int day = datePickerDialog.getDatePicker().getDayOfMonth();
-                int month = datePickerDialog.getDatePicker().getMonth();
-                int year = datePickerDialog.getDatePicker().getYear();
-
-
-
-
-                String start = String.valueOf(day +"/"+ month + "/" + year);
-
-                int day2 = datePickerDialog2.getDatePicker().getDayOfMonth();
-                int month2 = datePickerDialog2.getDatePicker().getMonth();
-                int year2 = datePickerDialog2.getDatePicker().getYear();
+                else {
 
 
+                    int day = datePickerDialog.getDatePicker().getDayOfMonth();
+                    int month = datePickerDialog.getDatePicker().getMonth();
+                    int year = datePickerDialog.getDatePicker().getYear();
 
-                String End = String.valueOf(day2+ "/" + month2 + "/" + year2);
 
-                Toast.makeText(EditTrip.this, "" + start, Toast.LENGTH_SHORT).show();
+                    String start = String.valueOf(day + "/" + month + "/" + year);
 
-                intent.putExtra("name", String.valueOf(name));
-                intent.putExtra("desc", String.valueOf(description));
-                intent.putExtra("start", String.valueOf(start));
-                intent.putExtra("end", String.valueOf(End));
+                    int day2 = datePickerDialog2.getDatePicker().getDayOfMonth();
+                    int month2 = datePickerDialog2.getDatePicker().getMonth();
+                    int year2 = datePickerDialog2.getDatePicker().getYear();
 
-                Map<String,Object> map = new HashMap<>();
-                map.put("tripTitle",title);
-                map.put("tripName",name);
-                map.put("tripStartDate",start);
-                map.put("tripEndDate",End);
-                map.put("tripDescription",description);
-                map.put("tripID",tripID);
 
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        progressBar.setVisibility(View.GONE);
-                        databaseReference.updateChildren(map);
-                        Toast.makeText(EditTrip.this, "Trip Updated...", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(EditTrip.this,view_trip.class));
-                    }
+                    String End = String.valueOf(day2 + "/" + month2 + "/" + year2);
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(EditTrip.this, "" + start, Toast.LENGTH_SHORT).show();
 
-                        Toast.makeText(EditTrip.this, "Failed to update trip...", Toast.LENGTH_SHORT).show();
+                    intent.putExtra("name", String.valueOf(name));
+                    intent.putExtra("desc", String.valueOf(description));
+                    intent.putExtra("start", String.valueOf(start));
+                    intent.putExtra("end", String.valueOf(End));
 
-                    }
-                });
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("tripTitle", title);
+                    map.put("tripName", name);
+                    map.put("tripStartDate", start);
+                    map.put("tripEndDate", End);
+                    map.put("tripDescription", description);
+                    map.put("tripID", tripID);
+
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            progressBar.setVisibility(View.GONE);
+                            databaseReference.updateChildren(map);
+                            Toast.makeText(EditTrip.this, "Trip Updated...", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(EditTrip.this, view_trip.class));
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                            Toast.makeText(EditTrip.this, "Failed to update trip...", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+                }
 
             }
         });

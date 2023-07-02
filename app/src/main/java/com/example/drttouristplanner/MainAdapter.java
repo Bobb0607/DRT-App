@@ -3,6 +3,7 @@ package com.example.drttouristplanner;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,13 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
      *
      * @param options
      */
+
+    private String PlaceIDString;
+    private String TripIDString;
+
     public MainAdapter(@NonNull FirebaseRecyclerOptions<MainModel> options) {
         super(options);
+
     }
 
     @Override
@@ -49,6 +55,19 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
         holder.trip_start.setText(model.getTrip_start());
         holder.trip_end.setText(model.getTrip_end());
         holder.trip_desc.setText(model.getTrip_desc());
+
+        String tripIDString =  getRef(position).getKey();
+
+        holder.trip_id.setText(tripIDString);
+
+        holder.txt_place_id.setText(model.getPlace_id());
+        holder.txt_position_id.setText(""+position+"");
+
+        PlaceIDString = model.getPlace_id();
+        TripIDString = model.getTrip_id();
+
+
+
 
         //img
         Glide.with(holder.img.getContext())
@@ -78,14 +97,14 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
                 EditText trip_end = view1.findViewById(R.id.txtTripend);
                 EditText trip_desc = view1.findViewById(R.id.txtTripdesc);
 
-                Button btnUpdate = view1.findViewById(R.id.btnUpdate);
-
+                Button btnUpdate = view1.findViewById(R.id.btnSubmitUpdate);
 
                 trip_spot.setText(model.getTrip_spot());
                 trip_name.setText(model.getTrip_name());
                 trip_start.setText(model.getTrip_start());
                 trip_end.setText(model.getTrip_end());
                 trip_desc.setText(model.getTrip_desc());
+
 
                 dialogPlus.show();
 
@@ -167,22 +186,111 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
     class myViewHolder extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView trip_spot, trip_name, trip_start, trip_end, trip_desc;
+        TextView trip_id, txt_place_id, trip_spot, trip_name, trip_start, trip_end, trip_desc, txt_position_id;
 
-        Button btnEdit, btnDelete;
+        Button btnEdit, btnDelete, createimg;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
             img = (CircleImageView)itemView.findViewById(R.id.img1);
+            createimg = (Button)itemView.findViewById(R.id.createimg);
             trip_spot = (TextView)itemView.findViewById(R.id.tripspottext);
             trip_name = (TextView)itemView.findViewById(R.id.tripnametext);
             trip_start = (TextView)itemView.findViewById(R.id.tripstarttext);
             trip_end = (TextView)itemView.findViewById(R.id.tripendtext);
             trip_desc = (TextView)itemView.findViewById(R.id.tripdesctext);
+            trip_id = (TextView)itemView.findViewById(R.id.tvTripID);
+            txt_place_id = (TextView)itemView.findViewById(R.id.tvPlaceID);
+            txt_position_id = (TextView)itemView.findViewById(R.id.tvContentModelPosition);
+
+            createimg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent ii = new Intent(itemView.getContext(),ItineraryList.class);
+                    //ii.putExtra("place_id",PlaceIDString);
+                    ii.putExtra("place_id",txt_place_id.getText().toString());
+                    ii.putExtra("trip_id",trip_id.getText().toString());
+                    ii.putExtra("trip_name",trip_name.getText().toString());
+                    ii.putExtra("date_start",trip_start.getText().toString());
+                    ii.putExtra("date_end",trip_end.getText().toString());
+                    itemView.getContext().startActivity(ii);
+
+                }
+            });
+
+
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
+
+            btnEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    final DialogPlus dialogPlus = DialogPlus.newDialog(itemView.getContext())
+                            .setContentHolder(new com.orhanobut.dialogplus.ViewHolder(R.layout.edit_itinerary))
+                            .setExpanded(false,0)
+                            .create();
+
+                    View view1 = dialogPlus.getHolderView();
+
+                    dialogPlus.show();
+
+                }
+            });
+
+
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
+
+            btnDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    /**
+                    final DialogPlus dialogPlus = DialogPlus.newDialog(itemView.getContext())
+                            .setContentHolder(new com.orhanobut.dialogplus.ViewHolder(R.layout.delete_itinerary))
+                            .setExpanded(false,0)
+                            .create();
+
+                    View view1 = dialogPlus.getHolderView();
+
+                    dialogPlus.show();**/
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    builder.setTitle("Delete Trip from Planner");
+                    builder.setMessage("Are you sure you want to\nDelete "+trip_name.getText().toString()+"("+trip_spot.getText().toString()+")?");
+
+                    String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                    builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                            String str_position = txt_position_id.getText().toString();
+                            int position = Integer.parseInt(str_position);
+
+                            FirebaseDatabase.getInstance().getReference(currentuser).child("trips")
+                                    .child(getRef(position).getKey()).removeValue();
+
+                            Toast.makeText(v.getContext(), "Your Trip entitled: "+trip_name.getText().toString()+"\n is successfully deleted from your planner", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(v.getContext(), "Cancelled.", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+                    builder.show();
+
+
+                }
+            });
+
+
 
         }
     }

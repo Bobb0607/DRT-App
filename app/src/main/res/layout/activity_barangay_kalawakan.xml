@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blue_shade_1"
+        android:background="@color/grey"
         tools:context=".BarangayKalawakan"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-10dp">
@@ -23,10 +23,10 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:text="In Barangay Kalawakan, there is a Talon Pare which has a natural body of water and has been a tourist destination because of its natural charm. Residents named the location after an older man caught with a woman in the area by his wife."
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="44dp"
             android:textColor="@color/white"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:background="@drawable/custom_button_back"
             android:onClick="Hills"
             android:text="Hills"
@@ -59,7 +59,7 @@
             android:background="@drawable/custom_button_back"
             android:onClick="Rivers"
             android:text="Rivers"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.2"
@@ -76,7 +76,7 @@
             android:layout_marginEnd="22dp"
             android:background="@drawable/custom_button_back"
             android:onClick="Caves"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:text="Caves"
             app:layout_constraintEnd_toStartOf="@+id/button23"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
             android:layout_marginStart="44dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="22dp"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:textColor="@color/white"
             android:background="@drawable/custom_button_back"
             android:onClick="Mountains"
@@ -108,7 +108,7 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/custom_button_back"
             android:onClick="Falls"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:textColor="@color/white"
             android:text="Falls"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -121,10 +121,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:text="Welcome to Barangay Kalawakan"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -148,6 +148,23 @@
             app:layout_constraintTop_toBottomOf="@+id/textView32">
 
         </com.denzcoskun.imageslider.ImageSlider>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            app:backgroundTint="#74D8D8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button24"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button22"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_question_mark_24"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

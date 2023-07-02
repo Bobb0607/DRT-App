@@ -17,6 +17,9 @@ public class iteniraryAdapter extends RecyclerView.Adapter<iteniraryAdapter.View
 
     private ArrayList<iteniraryModel> iteniraryModels;
 
+    public iteniraryAdapter(ArrayList<iteniraryModel> iteniraryModels, trip_view trip_view) {
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView name, start, end;

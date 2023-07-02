@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_shade_1"
+    android:background="@color/grey"
     android:fillViewport="true">
 
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="134dp"
-        android:background="@drawable/mountainbg"
+        android:background="@drawable/welcometodrt"
         android:elevation="-1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +25,12 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/roboto_bold"
         android:text="Choose a Barangay"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="130dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/roboto_bold"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
         android:text="To start a new journey"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -50,18 +58,16 @@
         android:id="@+id/materialCardView0"
         android:layout_width="160dp"
         android:layout_height="140dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="10dp"
         android:foregroundGravity="center"
         android:onClick="All"
+        android:visibility="invisible"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/materialCardView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="676dp">
 
         <ImageView
             android:id="@+id/imageView0"
@@ -83,20 +89,19 @@
             android:textSize="16sp" />
     </com.google.android.material.card.MaterialCardView>
 
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
         android:layout_width="160dp"
         android:layout_height="140dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
         android:foregroundGravity="center"
         android:onClick="Bayabas"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/materialCardView0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
         tools:ignore="MissingConstraints">
 
@@ -106,7 +111,7 @@
             android:layout_height="93dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/hall" />
+            app:srcCompat="@drawable/bayabasbg" />
 
         <TextView
             android:id="@+id/textView3"
@@ -124,17 +129,16 @@
         android:id="@+id/materialCardView6"
         android:layout_width="160dp"
         android:layout_height="140dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
         android:foregroundGravity="center"
         android:onClick="Talbak"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="30dp"
         app:cardElevation="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/materialCardView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialCardView4"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -143,7 +147,7 @@
             android:layout_height="93dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/hall" />
+            app:srcCompat="@drawable/talbakbg" />
 
         <TextView
             android:id="@+id/textView7"
@@ -162,9 +166,10 @@
         android:id="@+id/materialCardView3"
         android:layout_width="160dp"
         android:layout_height="140dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+
         android:foregroundGravity="center"
         android:onClick="Camachin"
         app:cardBackgroundColor="#FFFFFF"
@@ -172,7 +177,7 @@
         app:cardElevation="5dp"
         app:layout_constraintEnd_toStartOf="@+id/materialCardView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView0"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
         tools:ignore="MissingConstraints">
 
 
@@ -182,7 +187,7 @@
             android:layout_height="93dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/hall" />
+            app:srcCompat="@drawable/camachinbg" />
 
         <TextView
             android:id="@+id/textView4"
@@ -198,53 +203,14 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView4"
-        android:layout_width="160dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:foregroundGravity="center"
-        android:onClick="Kalawakan"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/materialCardView6"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
-        tools:ignore="MissingConstraints">
-
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="158dp"
-            android:layout_height="93dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/hall" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Kalawakan"
-            android:textColor="#5C5C5C"
-            android:textSize="24sp" />
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="160dp"
         android:layout_height="140dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
         android:foregroundGravity="center"
         android:onClick="Camachile"
+
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -259,7 +225,7 @@
             android:layout_height="93dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            app:srcCompat="@drawable/hall" />
+            app:srcCompat="@drawable/camachilebg" />
 
         <TextView
             android:id="@+id/textView6"
@@ -279,4 +245,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="view2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView4"
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:foregroundGravity="center"
+        android:onClick="Kalawakan"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/materialCardView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="158dp"
+            android:layout_height="94dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/kalawakanbg" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Kalawakan"
+            android:textColor="#5C5C5C"
+            android:textSize="24sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bottom_navigation"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="542dp"
+            android:clickable="true"
+            app:backgroundTint="#74D8D8D8"
+            app:srcCompat="@drawable/ic_baseline_question_mark_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#0099d1"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/manu_navigation" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

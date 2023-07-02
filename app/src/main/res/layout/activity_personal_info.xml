@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_shade_1"
+    android:background="@color/grey"
     tools:context=".PersonalInfo">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
+
     <TextView
         android:id="@+id/profile_name"
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
         android:elevation="10dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center_vertical"
         android:paddingVertical="10dp"
         android:paddingLeft="10dp"
@@ -42,21 +43,6 @@
         app:layout_constraintStart_toStartOf="@+id/profile_image"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cancelBtn3"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:background="@drawable/custom_button_back"
-        android:clickable="true"
-        android:text="back"
-        android:fontFamily="@font/baloo"
-        android:textSize="20dp"
-        android:backgroundTint="@color/quantum_googred"
-        app:layout_constraintEnd_toEndOf="@+id/edit_profile_btn"
-        app:layout_constraintStart_toStartOf="@+id/edit_profile_btn"
-        app:layout_constraintTop_toBottomOf="@+id/edit_profile_btn" />
 
     <TextView
         android:id="@+id/profile_email"
@@ -69,7 +55,7 @@
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:drawablePadding="10dp"
         android:elevation="10dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center_vertical"
         android:paddingVertical="10dp"
         android:paddingLeft="10dp"
@@ -90,7 +76,7 @@
         android:drawableStart="@drawable/ic_home"
         android:drawablePadding="10dp"
         android:elevation="10dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center_vertical"
         android:paddingVertical="10dp"
         android:paddingLeft="10dp"
@@ -99,6 +85,37 @@
         app:layout_constraintEnd_toEndOf="@+id/profile_email"
         app:layout_constraintStart_toStartOf="@+id/profile_email"
         app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="#2596be"
+        android:clickable="true"
+        android:fontFamily="@font/roboto_bold"
+        android:text="edit"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_address"
+        app:layout_constraintTop_toBottomOf="@+id/profile_address" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelBtn3"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/quantum_googred"
+        android:clickable="true"
+        android:fontFamily="@font/roboto_bold"
+        android:text="back"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/profile_address"
+        app:layout_constraintTop_toBottomOf="@+id/profile_address" />
 
     <TextView
         android:id="@+id/profile_contact"
@@ -117,6 +134,7 @@
         android:paddingLeft="10dp"
         android:text="Contact number"
         android:textSize="20dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/profile_address"
         app:layout_constraintStart_toStartOf="@+id/profile_address"
         app:layout_constraintTop_toBottomOf="@+id/profile_address" />
@@ -132,23 +150,8 @@
         app:layout_constraintTop_toTopOf="@+id/profile_image"
         app:srcCompat="@drawable/ic_baseline_edit_24" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/edit_profile_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="@drawable/custom_button_back"
-        android:backgroundTint="#2596be"
-        android:text="edit"
-        android:textColor="@color/white"
-        android:fontFamily="@font/baloo"
-        android:textSize="20dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="@+id/profile_contact"
-        app:layout_constraintStart_toStartOf="@+id/profile_contact"
-        app:layout_constraintTop_toBottomOf="@+id/profile_contact" />
-
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="700dp"
         android:layout_marginTop="19dp"
@@ -168,6 +171,24 @@
             android:visibility="gone" />
 
     </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#0099d1"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/manu_navigation" />
+
+
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

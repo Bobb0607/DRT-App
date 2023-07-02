@@ -1,14 +1,17 @@
 package com.example.drttouristplanner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -22,18 +25,36 @@ public class BarangayAll extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_barangay);
 
-        imageSlider = findViewById(R.id.image_slider);
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        ArrayList<SlideModel> images = new ArrayList<>();
-        images.add(new SlideModel(R.drawable.talonnieba, ScaleTypes.FIT));
-        images.add(new SlideModel(R.drawable.mtmanalmon, ScaleTypes.FIT));
-        images.add(new SlideModel(R.drawable.palanguyan, ScaleTypes.FIT));
-        images.add(new SlideModel(R.drawable.pantingancave, ScaleTypes.FIT));
-        images.add(new SlideModel(R.drawable.simbahangbato, ScaleTypes.FIT));
-        images.add(new SlideModel(R.drawable.malangaanspring, ScaleTypes.FIT));
+                switch(item.getItemId())
+                {
+                    case R.id.navbottomhome:
+                        return true;
+                    case R.id.navbottomtrips:
+                        startActivity(new Intent(getApplicationContext(),recyclerviewfinal.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcategories:
+                        startActivity(new Intent(getApplicationContext(),All_Barangay.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcreateTrip:
+                        startActivity(new Intent(getApplicationContext(),Barangay.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomprofile:
+                        startActivity(new Intent(getApplicationContext(),edit_profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
 
-
-        imageSlider.setImageList(images);
+                }
+                return false;
+            }
+        });
     }
 
     public void Falls(View v) {
@@ -83,7 +104,7 @@ public class BarangayAll extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Infrastructure(View v) {
+    public void Infrastructures(View v) {
         Intent intent = new Intent(BarangayAll.this, Content_All.class);
         intent.putExtra("target_data", "infrastructure");
         startActivity(intent);

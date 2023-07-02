@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -75,9 +77,6 @@ public class edit_profile extends AppCompatActivity {
     Button cancelBtn, openmapBtn;
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +93,43 @@ public class edit_profile extends AppCompatActivity {
         resetEmailLocal = findViewById(R.id.resetEmailLocal);
         profileAddressEdit = findViewById(R.id.profile_address_edit);
         cancelBtn = findViewById(R.id.cancel_btn2);
+
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.navbottomprofile);
+
+        // Perform item selected listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.navbottomhome:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.navbottomtrips:
+                        startActivity(new Intent(getApplicationContext(),recyclerviewfinal.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcategories:
+                        startActivity(new Intent(getApplicationContext(),Categories.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcreateTrip:
+                        startActivity(new Intent(getApplicationContext(),Barangay.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomprofile:
+                        startActivity(new Intent(getApplicationContext(),edit_profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
 
 

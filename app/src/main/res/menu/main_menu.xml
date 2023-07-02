@@ -10,10 +10,6 @@
             android:id="@+id/nav_trips"
             android:icon="@drawable/ic_baseline_directions_bus_24"
             android:title="View my trips" />
-        <item
-            android:id="@+id/nav_help"
-            android:icon="@drawable/ic_help"
-            android:title="Help" />
     </group>
 
 

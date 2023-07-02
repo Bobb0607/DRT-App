@@ -2,7 +2,7 @@ package com.example.drttouristplanner;
 
 public class MainModel {
 
-    String trip_spot, trip_start, trip_name, trip_end, trip_desc;
+    String place_id, trip_id, trip_spot, trip_start, trip_name, trip_end, trip_desc;
 
     MainModel()
     {
@@ -10,7 +10,9 @@ public class MainModel {
     }
 
 //constructor
-    public MainModel(String trip_spot, String trip_start, String trip_name, String trip_end, String trip_desc) {
+    public MainModel(String place_id, String trip_id, String trip_spot, String trip_start, String trip_name, String trip_end, String trip_desc) {
+        this.trip_id = trip_id;
+        this.place_id = place_id;
         this.trip_spot = trip_spot;
         this.trip_start = trip_start;
         this.trip_name = trip_name;
@@ -19,6 +21,22 @@ public class MainModel {
 
 
 //getter and setter
+    }
+
+    public String getPlace_id() {
+        return place_id;
+    }
+
+    public void setPlace_id(String place_id) {
+        this.place_id = place_id;
+    }
+
+    public String getTrip_id() {
+        return trip_id;
+    }
+
+    public void setTrip_id(String trip_id) {
+        this.trip_id = trip_id;
     }
 
     public String getTrip_spot() {

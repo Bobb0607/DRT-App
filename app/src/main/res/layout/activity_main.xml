@@ -5,18 +5,20 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:fitsSystemWindows="true"
     android:background="@color/blue_shade_1"
-    tools:openDrawer="start">
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+    tools:visibility="visible">
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
+        android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu"
-        android:layout_gravity="start"/>
+        tools:visibility="visible" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -25,7 +27,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/blue_shade_1">
+            android:background="@color/grey">
 
             <Button
                 android:id="@+id/logoutBtn"
@@ -99,79 +101,193 @@
             <Button
                 android:id="@+id/continueBtn"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="100dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
                 android:background="@drawable/custom_button_back"
+                android:fontFamily="@font/baloo"
                 android:onClick="Continue"
                 android:text="View Tourist Spots"
                 android:textAllCaps="false"
                 android:textColorHint="#CA5454"
                 android:textSize="20sp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 app:backgroundTint="@null"
                 app:iconPadding="1dp"
                 app:iconSize="50dp"
-                android:fontFamily="@font/baloo"
                 app:iconTint="#4CAF50"
-                app:layout_constraintEnd_toEndOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
+                ></Button>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/startTourDrt"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Start a tour at DRT?"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/continueBtn"
                 app:layout_constraintStart_toStartOf="@+id/continueBtn"
                 app:layout_constraintTop_toBottomOf="@+id/continueBtn" />
 
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/baloo"
-                android:text="Get Ready for"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView8"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="68dp"
+                android:onClick="Family"
+                app:cardBackgroundColor="#FFFFFF"
+
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.49"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.025" />
+                tools:ignore="MissingConstraints">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/baloo"
-                android:text="NEW ADVENTURES"
-                android:textSize="34sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.071" />
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:onClick="Family"
+                    android:scaleType="fitXY">
 
+                </com.denzcoskun.imageslider.ImageSlider>
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="196dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="86dp"
-                android:layout_marginTop="231dp"
-                android:layout_marginEnd="87dp"
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="95dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Featured Places"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="21dp"
+                android:onClick="Featured"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/verifyMsg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView8"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/touristimg" />
+                tools:ignore="MissingConstraints">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:onClick="Featured"
+                    android:scaleType="fitXY">
+
+                </com.denzcoskun.imageslider.ImageSlider>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="95dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Top Family Destinations"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="24sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="21dp"
+                android:onClick="Swimming"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/verifyMsg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:onClick="Swimming"
+                    android:scaleType="fitXY">
+
+                </com.denzcoskun.imageslider.ImageSlider>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="95dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Top Swimming Destinations"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="24sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView4"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="21dp"
+                android:onClick="Hiking"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/verifyMsg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:onClick="Hiking"
+                    android:scaleType="fitXY">
+
+                </com.denzcoskun.imageslider.ImageSlider>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="95dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Mountain Hiking"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="24sp" />
+            </com.google.android.material.card.MaterialCardView>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -188,20 +304,38 @@
                 app:layout_constraintVertical_bias="0.006"
                 app:navigationIcon="@drawable/navbarbtn" />
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="match_parent"
-                android:layout_height="134dp"
-                android:background="@drawable/mountainbg"
-                android:elevation="-1dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="90dp"
+            android:src="@drawable/ic_baseline_question_mark_24"
+            app:backgroundTint="#79FFFFFF"
+            app:tint="@color/white" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#0099d1"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/manu_navigation" />
+    </RelativeLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>

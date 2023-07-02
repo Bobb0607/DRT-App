@@ -6,44 +6,58 @@
         <entry key="..\:/Users/Bobby Implica/AndroidStudioProjects/DRTTouristPlanner/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Bobby Implica/AndroidStudioProjects/DRTTouristPlanner/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Bobby Implica/AndroidStudioProjects/DRTTouristPlanner/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/Bobby Implica/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1" />
+        <entry key="..\:/Users/Bobby Implica/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.1" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/account_icon.xml" value="0.178" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/add_profile_picture.xml" value="0.1445" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/bottomnavselector.xml" value="0.1785" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/custom_button_back.xml" value="0.1125" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/customcreateicon.xml" value="0.152" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/frame.xml" value="0.1445" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/home_icon.xml" value="0.145" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/ic_baseline_create_24.xml" value="0.1785" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1125" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/ic_help.xml" value="0.1335" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/round_btn.xml" value="0.1" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/round_drawable.xml" value="0.128" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/rounded.xml" value="0.1615" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/rounded_corner.xml" value="0.173" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/selector.xml" value="0.1785" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/text_rounded.xml" value="0.1445" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/drawable/undraw_no_data_re_kwbl.xml" value="0.1785" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_address_layout.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_all_barangay.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_autocomplete_place.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_all.xml" value="0.20863616930312098" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_bayabas.xml" value="0.16486486486486487" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_bayabas.xml" value="0.1" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_camachile.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_camachin.xml" value="0.16058394160583941" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_kalawakan.xml" value="0.136" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_barangay_talbak.xml" value="0.128" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_contactinfo.xml" value="0.264" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_contactinfo.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_content_all.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_create_trip.xml" value="0.264" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_edit_contact_layout.xml" value="0.152" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_edit_name_layout.xml" value="0.2" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_edit_profile.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_edit_trip.xml" value="0.20863616930312098" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_help.xml" value="0.1" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_get_lat_long_code.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_get_location_code.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_help.xml" value="0.16" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_itenerary_adapter.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_itinerary_edit_details.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_itinerary_list.xml" value="0.176" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_login.xml" value="0.20863616930312098" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_main.xml" value="0.19696969696969696" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_main2.xml" value="0.19709277469003847" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_map3.xml" value="0.20778110303548525" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_maps.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_maps2.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_maps_route.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_nav_view.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_navbottom.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_navigation_view.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_personal_info.xml" value="0.2" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_places_api.xml" value="0.20863616930312098" />
@@ -52,31 +66,52 @@
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_set_trip_name.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_show_details.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_trip_view.xml" value="0.25104166666666666" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_view_trip.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_view_trip.xml" value="0.264" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/activity_view_trips.xml" value="0.19709277469003847" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/add_itinerary_dialog.xml" value="0.2" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.264" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/category.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/content.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/content_barangay_all.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/content_itenerary_adapter.xml" value="0.20863616930312098" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/custom_content_layout.xml" value="0.2" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/developers.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/custom_content_layout.xml" value="0.4" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/delete_itinerary.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/developers.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/edit_itinerary.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/edit_place_rating.xml" value="0.2" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_first.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_first3.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_home.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_itenerary.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_maps.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_nav_home.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_nav_logout.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_nav_profile.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_nav_view_trip.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_notification.xml" value="0.20854700854700856" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_profile.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_second.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_second2.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/fragment_second3.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/header.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/help.xml" value="0.1" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/homepage.xml" value="0.24547101449275363" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/itenirary_layout.xml" value="0.4" />
-        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/main_item.xml" value="0.4" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/itenirary_layout.xml" value="0.176" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/itinerary_list_detail_item.xml" value="0.176" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/main_item.xml" value="0.264" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/map_view.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/navigation_view.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/place_rating.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/recycleview.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/recycleview2.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/reviews_list_item.xml" value="0.2" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/trip_rv_item.xml" value="0.2" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/update_popup.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/layout/view_reviews.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/bottom_menu.xml" value="0.19623770842240273" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/bottom_nav_menu.xml" value="0.190625" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/main_menu.xml" value="0.2" />
+        <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/manu_navigation.xml" value="0.20778110303548525" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/menu.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/menu_item.xml" value="0.253125" />
         <entry key="..\:/Users/Bobby Implica/Downloads/DRTTouristPlanner/app/src/main/res/menu/search.xml" value="0.20863616930312098" />
@@ -163,7 +198,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="ibm-11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

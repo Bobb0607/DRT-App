@@ -1,10 +1,78 @@
 <resources>
-    <string name="app_name"> </string>
+    <string name="app_name">DRT Tourist Planner</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navi">Close</string>
     <string name="googleApi">AIzaSyCTFEhjwd3MS971CvMG85qIFLWXEYi-Q8s</string>
+
+    <string name ="candlemonument">
+
+RULES AND REGULATION \n no smoking clean as you go \n pet is allowed \n Entrance for day tour \n 70 adults, 20 kid \n for tour guide 300 - 5 person
+    </string>
+
+    <string name ="malangaan">
+We are implementing strict regulations on wearing life vest during the entire stay in our spots. \n 70/head entrance fee with inclusion of life vest \n \n 300 tour guide fee for 5 pax \n Parking Fee\'s \n 20 single \n 30 3 wheels \n 50 4 wheels \n\n Rules and Regulations \n New Policy Implemented with in the Spot. \n 1. No Tourguide No Entry \n 2. No Life Vest No Entry \n 3. No ambulant vendors allowed \n 4. We strictly implementing CLAYGO (clean as you go) \n 5. We allowed bringing of pets
+    </string>
+
+    <string name ="palanguyan">
+
+RULES AND REGULATION \n New Policy Implemented with in the Spot. \n 1. No Tourguide No Entry \2. No Life Vest No Entry\n 3. No ambulant vendors allowed \n 4. We strictly implementing CLAYGO (clean as you go) \n 5. We allowed bringing of pets \n \n 70/head entrance fee with inclusion of life vest \n 300 tour guide fee for 5 pax \n Parking Fee\'s \n 20 single \n 30 3 wheels \n 50 4 wheels \n 100 mini bus
+    </string>
+
+    <string name ="secretfalls">
+
+RULES AND REGULATION \n no cooking and drinking alcohol in swimming pool minidam, and water falls\n no smoking \n clean as you go \n INSIDE FEE\n Entrance for day tour \n 70 adults \2. 20 kid\n Entrance for overnight \n 120 adult \n 50 kid \n \n TG Fee: kung magkano lng makayanan. \n COTTAGES \n Daytour 8AM - 5PM \n 150 4 to 6 person (no room)\n 200  8 to 10 perso ( no room) \n 300 10 to 15 person (no room)\n 500  with room 4 to 6 person \n 800 10 to 20 person with room \n\n Overnight  with room \n 1PM - 1PM next day \n 1000 2 person \n  1200 4 to 6 person \n  1500 7 to 10 person \n  2400 10 to 20 person \n FEE\'S OUTSIDE \n 20 parking \n 10 brgy. fee
+    </string>
+
+    <string name ="simbahangbato">
+
+RULES AND REGULATION \n no cooking and drinking alcohol in bathing area\n no smoking \n clean as you go \n pet is allowed \n strictly supervise your kids when they are in the river \n\n FEE\s OUTSIDE \n 20 parking \n 10 brgy. fee \2. 20 kid \n\n INSIDE FEE \n Entrance for day tour 70 adults \n 20 kid \n Entrance for Overnight \n 120 adult \n 50 kid
+    </string>
+
+    <string name ="talonnieva">
+
+RULES AND REGULATION \n no cooking and drinking alcohol in swimming pool minidam, and water falls\n no smoking \n clean as you go \n pet is allowed \n strictly supervise your kids when they are in the river \n\n FEE\s OUTSIDE \n 20 parking \n 10 brgy. fee \2. 20 kid \n\n INSIDE FEE \n Entrance for day tour 70 adults \n 20 kid \n Entrance for Overnight \n 120 adult \n 50 kid \n TG Fee: 300 - 5 pax
+
+    </string>
+
+    <string name ="talonpari">
+
+RULES AND REGULATION \n no cooking and drinking alcohol in swimming pool minidam, and water falls\n no smoking \n clean as you go \n pet is allowed \n strictly supervise your kids when they are in the river \n\n FEE\s OUTSIDE \n 20 parking \n 10 brgy. fee \2. 20 kid \n\n INSIDE FEE \n Entrance for day tour 70 adults \n 20 kid \n Entrance for Overnight \n 120 adult \n 50 kid \n TG Fee: 300 - 5 pax
+
+    </string>
+
+    <string name ="tangkeriver">
+
+We are implementing strict regulations on wearing life vest during the entire stay in our spots. \n 70/head entrance fee with inclusion of life vest\n 300 tour guide fee for 5 pax \n\n Parking Fee\'s \n 20 single \n 30 3 wheels \n 50 4 wheels \n\n Rules and Regulations \n New Policy Implemented with in the Spot. \n 1. No Tourguide No Entry \No Life Vest No Entry \n No ambulant vendors allowed  \n We strictly implementing CLAYGO (clean as you go) \n We only allowed limited numbers of liquors in a group \n We allowed bringing of pets
+
+    </string>
+
+    <string name ="tilapilonriver">
+
+RULES AND REGULATION \n Things to remember:\n We are open everyday from 5am - 5pm. \n\n Everyone is welcome ~ kids, senior citizens and furbabies. \n\n Tour guide is required by the tourism office and for your safety \n\n We have a wide and secure parking space \n\n No need for reservation. We accept walk-ins.
+
+    </string>
+
+    <string name ="tilapilonhillscafe">
+
+Monday - Friday: 8AM - 5PM \n Saturday - Sunday and Holidays: 7AM - 5PM
+
+    </string>
+
+    <string name ="verdibiafalls">
+
+Rules and Regulation \n New Policy Implemented with in the Spot.\n 1. No Tourguide No Entry\n 2. No Life Vest No Entry \n 3. No ambulant vendors allowed  \n 4. We strictly implementing CLAYGO (clean as you go) \n 5. We only allowed limited numbers of liquors in a group \n 6. We allowed bringing of pets /nn We are implementing strict regulations on wearing life vest during the entire stay in our spots. \n 70/head entrance fee with inclusion of life vest \n 300 tour guide fee for 5 pax \n Parking Fee\'s \n 20 single \n 30 3 wheels \n 50 4 wheels \n 100 mini bus
+
+    </string>
+
+
+
+
+
+
+
+
 
     <string-array name="numbers">
 
@@ -180,5 +248,46 @@
     <string name="title_activity_maps2">MapsActivity2</string>
     <string name="title_activity_barangay_all">BarangayAll</string>
     <string name="title_activity_itenerary_adapter">IteneraryAdapter</string>
+    <string name="title_activity_maps_route">MapsActivityRoute</string>
+
+
+    <string-array name="days">
+        <item>Day 1</item>
+        <item>Day 2</item>
+        <item>Day 3</item>
+        <item>Day 4</item>
+        <item>Day 5</item>
+        <item>Day 6</item>
+        <item>Day 7</item>
+        <item>Day 8</item>
+        <item>Day 9</item>
+    </string-array>
+
+    <string-array name="itineraryspots">
+
+        <item>Adarna Falls</item>
+        <item>Batong Palaka</item>
+        <item>Candle monument</item>
+        <item>Malagaan Spring</item>
+        <item>Mt. Balistada</item>
+        <item>Mt. Mavio</item>
+        <item>Mt. Manalmon</item>
+        <item>Mt. Puting bato</item>
+        <item>Palanguyan Lake</item>
+        <item>Patingan cave</item>
+        <item>Puning cave</item>
+        <item>Secret falls</item>
+        <item>Simbahang Bato</item>
+        <item>Talon ni eba</item>
+        <item>Talon ni lukab</item>
+        <item>Talon ni pari</item>
+        <item>Talon ni pedro</item>
+        <item>Talon ni zamora</item>
+        <item>Tangke River</item>
+        <item>Tila Pilon Hills</item>
+        <item>Tila Pilon Hills Cafe</item>
+        <item>Tung-tung falls</item>
+        <item>Verdibia falls</item>
+    </string-array>
 
 </resources>

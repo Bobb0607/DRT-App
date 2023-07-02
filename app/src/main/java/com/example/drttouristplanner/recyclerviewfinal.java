@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -31,8 +33,64 @@ public class recyclerviewfinal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerviewfinal);
 
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.navbottomtrips);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton11);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(recyclerviewfinal.this);
+                builder.setMessage("Tap on the pencil button to see your itinerary list or to create itinerary")
+                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                // Create the AlertDialog object and return it
+                androidx.appcompat.app.AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        // Perform item selected listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.navbottomhome:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomtrips:
+                        return true;
+                    case R.id.navbottomprofile:
+                        startActivity(new Intent(getApplicationContext(),PersonalInfo.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcreateTrip:
+                        startActivity(new Intent(getApplicationContext(),Barangay.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomcategories:
+                        startActivity(new Intent(getApplicationContext(),Categories.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
+
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        Intent ii = getIntent();
+        String placeID = ii.getStringExtra("PlaceID"); // from CreateTrip.java
 
         String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseRecyclerOptions<MainModel> options =

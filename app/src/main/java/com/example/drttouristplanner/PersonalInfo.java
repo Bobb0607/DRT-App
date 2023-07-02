@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -45,11 +46,12 @@ public class PersonalInfo extends AppCompatActivity {
     TextView fullName, email, contactInfo, address;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    StorageReference storageReference;
     String tourist_ID;
     Button edit_profile_btn, cancelBtn;
     CircleImageView profileImage;
     ImageButton changeProfileImage;
-    StorageReference storageReference;
+
 
 
     ActivityResultLauncher<String> mTakePhoto;
@@ -60,6 +62,42 @@ public class PersonalInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
+
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.navbottomprofile);
+
+        // Perform item selected listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.navbottomcategories:
+                        startActivity(new Intent(getApplicationContext(),Categories.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.navbottomhome:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomtrips:
+                        startActivity(new Intent(getApplicationContext(),recyclerviewfinal.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.navbottomprofile:
+                        return true;
+                    case R.id.navbottomcreateTrip:
+                        startActivity(new Intent(getApplicationContext(),Barangay.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
 
         edit_profile_btn = findViewById(R.id.edit_profile_btn);
         changeProfileImage =findViewById(R.id.add_profilePicButton);

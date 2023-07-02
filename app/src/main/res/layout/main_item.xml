@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,24 +14,50 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/triptext_label"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img1"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="87dp"
+            android:layout_toStartOf="@+id/nothing"
+            android:fontFamily="@font/baloo"
+            android:gravity="start"
+            android:text="Click Image to View Itinerary"
+            android:textSize="10dp"
+            android:visibility="gone"
+            tools:layout_marginTop="5dp"></TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createimg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/customcreateicon">
+
+        </androidx.appcompat.widget.AppCompatButton>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
             android:layout_width="80dp"
+            android:visibility="gone"
             android:layout_height="80dp"
             android:src="@drawable/mountainbg"
             app:civ_border_color="#FF000000"
             app:civ_border_width="1dp" />
 
+
         <TextView
             android:id="@+id/tripspottext"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/img1"
-            android:fontFamily="@font/baloo"
             android:layout_marginStart="6dp"
+            android:paddingLeft="2dp"
+            android:fontFamily="@font/roboto_bold"
             android:text="Spot Name"
             android:textColor="@color/black"
             android:textSize="25dp"></TextView>
@@ -40,13 +67,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img1"
-
-
             android:layout_toStartOf="@+id/nothing"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:gravity="end"
             android:text="Trip Start"
-            android:textSize="10dp"></TextView>
+            android:textSize="10dp"
+            android:visibility="gone"></TextView>
 
         <TextView
             android:id="@+id/nothing"
@@ -54,23 +80,23 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img1"
             android:layout_marginHorizontal="6dp"
-            android:layout_toStartOf="@+id/tripendtext"
             android:fontFamily="@font/baloo"
             android:gravity="end"
             android:text="-"
-            android:textSize="10dp"></TextView>
+            android:textSize="10dp"
+            android:visibility="invisible"></TextView>
 
         <TextView
             android:id="@+id/tripnametext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tripspottext"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/img1"
+            android:paddingLeft="2dp"
+            android:layout_below="@id/tripspottext"
             android:layout_marginStart="6dp"
-            android:fontFamily="@font/baloo"
+            android:fontFamily="@font/roboto_bold"
             android:text="Trip Name"
-            android:textSize="20dp"></TextView>
+            android:textColor="@color/black"
+            android:textSize="15dp"></TextView>
 
         <TextView
             android:id="@+id/tripendtext"
@@ -81,54 +107,99 @@
             android:fontFamily="@font/baloo"
             android:gravity="end"
             android:text="Trip End"
+            android:visibility="invisible"
             android:textSize="10dp"></TextView>
+
 
         <TextView
             android:id="@+id/tripdesctext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tripnametext"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="5dp"
+            android:background="#cfcfcf"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="2dp"
+            android:text="Trip Description"
+            android:textColor="@color/black"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/tvTripID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tripstarttext"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/baloo"
             android:gravity="center"
-            android:text="Trip Description"
-            android:textSize="15dp"></TextView>
+            android:text="Trip ID value here"
+            android:textSize="15dp"
+            android:visibility="gone"></TextView>
+
+        <TextView
+            android:id="@+id/tvContentModelPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tripstarttext"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="ContentModel position value here (trip)"
+            android:textSize="15dp"
+            android:visibility="gone"></TextView>
+
+        <TextView
+            android:id="@+id/tvPlaceID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tripstarttext"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="Place ID value here"
+            android:textSize="15dp"
+            android:visibility="gone"></TextView>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/tripdesctext"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnEdit"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="6dp"
                 android:layout_marginRight="6dp"
                 android:background="@drawable/custom_button_back"
-                android:fontFamily="@font/baloo"
+                android:fontFamily="@font/roboto_bold"
                 android:text="edit"
                 android:textColor="@color/white"
-                android:textSize="20dp"></androidx.appcompat.widget.AppCompatButton>
+                android:textSize="15dp"></androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDelete"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="6dp"
                 android:background="@drawable/custom_button_back"
                 android:backgroundTint="@color/quantum_googred"
-                android:fontFamily="@font/baloo"
+                android:fontFamily="@font/roboto_bold"
                 android:text="Delete"
                 android:textColor="@color/white"
-                android:textSize="20dp"></androidx.appcompat.widget.AppCompatButton>
+                android:textSize="15dp"></androidx.appcompat.widget.AppCompatButton>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 
     </RelativeLayout>
